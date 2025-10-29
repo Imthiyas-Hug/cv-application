@@ -1,0 +1,48 @@
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.plus-symbol {
+  width: 22px;
+}
+.form {
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.form input, textarea {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 95%);
+}
+textarea{
+  height: 100px;
+}
+.field-title {
+  margin: 0px;
+  align-self: flex-start;
+  color: rgba(0, 0, 0, 0.6);
+}
+.field-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.date-field {
+  display: flex;
+  gap: 8px;
+}
+.date-field input {
+  width: 100px;
+}

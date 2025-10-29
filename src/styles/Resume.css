@@ -1,0 +1,75 @@
+.contactInfo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+.contact-list a {
+  text-decoration: none;
+}
+.educationContent-container h2, .experienceContent-container h2{
+    margin-top: 45px;
+    margin-bottom: 0;
+}
+.educationContent-container h2{
+    margin-top: 8px;
+}
+.title-university-div, .role-company-div{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.title-university-div h4, .role-company-div h4, .projectInfo-div h4{
+ margin-top: 0;
+ margin-bottom: 0;
+}
+.date-gpa-div, .date-div{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.educationInfo-div, .role-company-date-div{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px 0px 0px;
+}
+.experienceInfo-div, .projectInfo-div{
+    margin-bottom: 30px;
+}
+.name-link-div{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.link-div a{
+    text-decoration: none;
+}
+.skill-set{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.skill-set h4{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.skill-set p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.skill-set-div{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.resume-sheet{
+    padding: 10px 50px 30px;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}

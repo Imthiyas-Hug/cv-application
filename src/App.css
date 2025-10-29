@@ -1,0 +1,5 @@
+.main-div{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    column-gap: 20px;
+}
