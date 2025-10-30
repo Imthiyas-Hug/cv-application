@@ -13,10 +13,8 @@ function Sidebar({
   setEducationInfo1,
   educationInfo2,
   setEducationInfo2,
-  experienceInfo1,
-  setExperienceInfo1,
-  experienceInfo2,
-  setExperienceInfo2,
+  experienceInfo,
+  setExperienceInfo,
   projectInfo1,
   setProjectInfo1,
   projectInfo2,
@@ -40,10 +38,8 @@ function Sidebar({
         setEducationInfo2={setEducationInfo2}
       />
       <Experience
-        experienceInfo1={experienceInfo1}
-        setExperienceInfo1={setExperienceInfo1}
-        experienceInfo2={experienceInfo2}
-        setExperienceInfo2={setExperienceInfo2}
+        experienceInfo={experienceInfo}
+        setExperienceInfo={setExperienceInfo}
       />
       <Projects
         projectInfo1={projectInfo1}

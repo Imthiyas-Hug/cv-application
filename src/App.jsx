@@ -26,7 +26,7 @@ function App() {
     endDate: "Jun 2017",
   });
 
-  const [experienceInfo1, setExperienceInfo1] = useState({
+  const [experienceInfo, setExperienceInfo] = useState({
     role: "Software Engineer Intern",
     company: "Embark",
     description1:
@@ -37,16 +37,16 @@ function App() {
     endDate: "Nov 2022",
   });
 
-  const [experienceInfo2, setExperienceInfo2] = useState({
-    role: "Software Engineer Intern",
-    company: "MarketSmart",
-    description1:
-      "Built RESTful APIs that served data to the JavaScript front-end based on dynamically chosen user inputs that handled over 500,000 concurrent users",
-    description2:
-      "Built internal tools using NodeJS and Pupeteer.js to automate QA and monitoring of donor-facing web app, which improved CTR by 20%",
-    startDate: "May 2021",
-    endDate: "Nov 2021",
-  });
+  // const [experienceInfo2, setExperienceInfo2] = useState({
+  //   role: "Software Engineer Intern",
+  //   company: "MarketSmart",
+  //   description1:
+  //     "Built RESTful APIs that served data to the JavaScript front-end based on dynamically chosen user inputs that handled over 500,000 concurrent users",
+  //   description2:
+  //     "Built internal tools using NodeJS and Pupeteer.js to automate QA and monitoring of donor-facing web app, which improved CTR by 20%",
+  //   startDate: "May 2021",
+  //   endDate: "Nov 2021",
+  // });
 
   const [projectInfo1, setProjectInfo1] = useState({
     name: "Poker Simulation",
@@ -83,10 +83,8 @@ function App() {
         setEducationInfo1={setEducationInfo1}
         educationInfo2={educationInfo2}
         setEducationInfo2={setEducationInfo2}
-        experienceInfo1={experienceInfo1}
-        setExperienceInfo1={setExperienceInfo1}
-        experienceInfo2={experienceInfo2}
-        setExperienceInfo2={setExperienceInfo2}
+        experienceInfo={experienceInfo}
+        setExperienceInfo={setExperienceInfo}
         projectInfo1={projectInfo1}
         setProjectInfo1={setProjectInfo1}
         projectInfo2={projectInfo2}
@@ -98,8 +96,7 @@ function App() {
         contactInfo={contactInfo}
         educationInfo1={educationInfo1}
         educationInfo2={educationInfo2}
-        experienceInfo1={experienceInfo1}
-        experienceInfo2={experienceInfo2}
+        experienceInfo={experienceInfo}
         projectInfo1={projectInfo1}
         projectInfo2={projectInfo2}
         skillsInfo={skillsInfo}

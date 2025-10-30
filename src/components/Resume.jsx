@@ -77,13 +77,13 @@ function ExperienceInfo({ experienceInfo }) {
     </div>
   );
 }
-function ExperienceContent({ experienceInfo1, experienceInfo2 }) {
+function ExperienceContent({ experienceInfo}) {
+  
   return (
     <div className="experienceContent-container">
       <h2>EXPERIENCE</h2>
       <hr />
-      <ExperienceInfo experienceInfo={experienceInfo1} />
-      <ExperienceInfo experienceInfo={experienceInfo2} />
+      <ExperienceInfo experienceInfo={experienceInfo} />
     </div>
   );
 }
@@ -157,8 +157,7 @@ function Resume({
   contactInfo,
   educationInfo1,
   educationInfo2,
-  experienceInfo1,
-  experienceInfo2,
+  experienceInfo,
   projectInfo1,
   projectInfo2,
   skillsInfo,
@@ -171,8 +170,7 @@ function Resume({
         educationInfo2={educationInfo2}
       />
       <ExperienceContent
-        experienceInfo1={experienceInfo1}
-        experienceInfo2={experienceInfo2}
+        experienceInfo={experienceInfo}
       />
       <ProjectContent projectInfo1={projectInfo1} projectInfo2={projectInfo2} />
       <SkillsContent skillsInfo={skillsInfo} />

@@ -71,13 +71,7 @@ function RenderForm({ experienceInfo, handleChange, count }) {
   );
 }
 
-function Experience({
-  experienceInfo1,
-  setExperienceInfo1,
-  experienceInfo2,
-  setExperienceInfo2,
-}) {
-
+function Experience({ experienceInfo, setExperienceInfo }) {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -85,19 +79,35 @@ function Experience({
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setExperienceInfo1((prev) => ({
+    setExperienceInfo((prev) => ({
       ...prev,
       [name]: value,
     }));
+  };
+  const [count, setCount] = useState(1);
+
+  const [component, setComponent] = useState([
+    <RenderForm
+      experienceInfo={experienceInfo}
+      handleChange={handleChange}
+      count={count}
+      key={count}
+    />,
+  ]);
+
+  const handleRenderForm = () => {
+    setCount((c) => c + 1);
+    setComponent((prev) => [
+      ...prev,
+      <RenderForm
+        experienceInfo={experienceInfo}
+        handleChange={handleChange}
+        count={count}
+        key={count}
+      />,
+    ]);
   };
 
-  const handleChange2 = (e) => {
-    const { name, value } = e.target;
-    setExperienceInfo2((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
   return (
     <div>
       <div className="section-heading" onClick={toggleVisibility}>
@@ -105,16 +115,8 @@ function Experience({
         <img src={isVisible ? minus : plus} className="plus-symbol" />
       </div>
       <div style={{ display: isVisible ? "block" : "none" }}>
-        <RenderForm
-          experienceInfo={experienceInfo1}
-          handleChange={handleChange}
-          count={1}
-        />
-        <RenderForm
-          experienceInfo={experienceInfo2}
-          handleChange={handleChange2}
-          count={2}
-        />
+        {component}
+        <button onClick={handleRenderForm}>Add Experience</button>
       </div>
     </div>
   );
