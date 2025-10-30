@@ -22,6 +22,7 @@ function Sidebar({
   skillsInfo,
   setSkillsInfo,
 }) {
+
   return (
     <div className="sidebar-div">
       <div className="side-heading">

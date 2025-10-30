@@ -46,3 +46,20 @@ textarea{
 .date-field input {
   width: 100px;
 }
+.add-btn-div{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.add-btn{
+  padding: 8px 12px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.add-btn:hover{
+  background-color: hsl(0, 0%, 20%);
+}

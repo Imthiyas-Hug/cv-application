@@ -26,7 +26,7 @@ function App() {
     endDate: "Jun 2017",
   });
 
-  const [experienceInfo, setExperienceInfo] = useState({
+  const [experienceInfo, setExperienceInfo] = useState([{
     role: "Software Engineer Intern",
     company: "Embark",
     description1:
@@ -35,7 +35,16 @@ function App() {
       "Constructed the logic for a streamlined ad-serving platform that scaled to our 35M users, which improved the page speed by 15% after implementation",
     startDate: "May 2022",
     endDate: "Nov 2022",
-  });
+  },{
+    role: "Mechanical Engineer Intern",
+    company: "Embark",
+    description1:
+      "Worked with product managers to re-architect a multi-page web app into a single page web-app, boosting yearly revenue by $1.4M",
+    description2:
+      "Constructed the logic for a streamlined ad-serving platform that scaled to our 35M users, which improved the page speed by 15% after implementation",
+    startDate: "May 2022",
+    endDate: "Nov 2022",
+  }]);
 
   // const [experienceInfo2, setExperienceInfo2] = useState({
   //   role: "Software Engineer Intern",

@@ -31,7 +31,11 @@ function EducationInfo({ educationInfo }) {
       </div>
       <div className="date-gpa-div">
         <i>
-          <span>{formatdate(educationInfo.startDate) + " - " + formatdate(educationInfo.endDate)}</span>
+          <span>
+            {formatdate(educationInfo.startDate) +
+              " - " +
+              formatdate(educationInfo.endDate)}
+          </span>
         </i>
         <span style={{ alignSelf: "end" }}>{"GPA: " + educationInfo.gpa}</span>
       </div>
@@ -49,36 +53,37 @@ function EducationContent({ educationInfo1, educationInfo2 }) {
   );
 }
 function ExperienceInfo({ experienceInfo }) {
-  return (
-    <div className="experienceInfo-div">
+  return experienceInfo.map((exp, index) => (
+    <div className="experienceInfo-div" key={index}>
       <div className="role-company-date-div">
         <div className="role-company-div">
           <i>
-            <h4>{experienceInfo.role}</h4>
+            <h4>{exp.role}</h4>
           </i>
-          <span>{experienceInfo.company}</span>
+          <span>{exp.company}</span>
         </div>
         <div className="date-div">
           <i>
             <span>
-              {formatdate(experienceInfo.startDate) + " - " + formatdate(experienceInfo.endDate)}
+              {formatdate(exp.startDate) +
+                " - " +
+                formatdate(exp.endDate)}
             </span>
           </i>
         </div>
       </div>
       <ul>
         <li>
-          <p>{experienceInfo.description1}</p>
+          <p>{exp.description1}</p>
         </li>
         <li>
-          <p>{experienceInfo.description2}</p>
+          <p>{exp.description2}</p>
         </li>
       </ul>
     </div>
-  );
+  ));
 }
-function ExperienceContent({ experienceInfo}) {
-  
+function ExperienceContent({ experienceInfo }) {
   return (
     <div className="experienceContent-container">
       <h2>EXPERIENCE</h2>
@@ -169,9 +174,7 @@ function Resume({
         educationInfo1={educationInfo1}
         educationInfo2={educationInfo2}
       />
-      <ExperienceContent
-        experienceInfo={experienceInfo}
-      />
+      <ExperienceContent experienceInfo={experienceInfo} />
       <ProjectContent projectInfo1={projectInfo1} projectInfo2={projectInfo2} />
       <SkillsContent skillsInfo={skillsInfo} />
     </div>
